@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Brandon Hanlon <give101k@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "@google/maps": "^0.5.5",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}

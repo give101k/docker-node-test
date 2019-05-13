@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  docker-node-test:
+    image: docker-node-test
+    build: .
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
