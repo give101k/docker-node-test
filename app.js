@@ -76,10 +76,3 @@ app.get("/zip/:zippy", (req, res) => {
 app.listen(3001, () => {
   console.log("sever is listening on port 3001");
 });
-
-app.use(express.static(`${__dirname}/./build`));
-
-const path = require("path");
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./build/index.html"));
-});
