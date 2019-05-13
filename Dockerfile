@@ -9,3 +9,4 @@ RUN npm install -g -s --no-progress yarn && \
 	yarn cache clean
 CMD [ "yarn", "start" ]
 EXPOSE 3001
+EXPOSE 80
