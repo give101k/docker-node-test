@@ -11,7 +11,7 @@ app.get("/place", (req, res) => {
   googleMapsClient
     .placesNearby({
       language: "en",
-      
+
       location: [41.133916, -74.356341],
       radius: 30000,
       type: "car_repair"
@@ -67,7 +67,7 @@ app.get("/zip/:zippy", (req, res) => {
     .geocode({
       address: req.params.zippy
     })
-    .asPromise()s
+    .asPromise()
     .then(response => {
       res.json(response.json.results[0].geometry.location);
     });
