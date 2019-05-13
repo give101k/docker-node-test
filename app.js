@@ -7,10 +7,6 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 
-app.get("/", (req, res) => {
-  res.json({ status: "hello" });
-});
-
 app.get("/place", (req, res) => {
   googleMapsClient
     .placesNearby({
@@ -81,9 +77,9 @@ app.listen(3001, () => {
   console.log("sever is listening on port 3001");
 });
 
-app.use(express.static(`${__dirname}/../build`));
+app.use(express.static(`${__dirname}/./build`));
 
 const path = require("path");
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build/index.html"));
+  res.sendFile(path.join(__dirname, "./build/index.html"));
 });
