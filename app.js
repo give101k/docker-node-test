@@ -31,8 +31,7 @@ app.get("/place/:lat/:long", (req, res) => {
       language: "en",
       location: [req.params.lat, req.params.long],
       radius: 3000,
-      type: "car_repair",
-      rankby: "distance"
+      type: "car_repair"
     })
     .asPromise()
     .then(response => {
